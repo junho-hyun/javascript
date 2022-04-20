@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello.html</title>
+</head>
+<body>
+    <button onclick="move()" >오른쪽으로 움직이기</button>
+    <button onmouseover="move()">마우스를 올려보셈</button>
+    <br>
+    <img id="kimImg" src="images/kim1.png">
+    <script>
+        // 웹부라우저야
+        // 혹시 클라이언트가 위의 버튼을 클릭하면
+        // id 가 kimImg 인 이미지를 
+        // 오른쪽으로 100px 이동 시켜줘!
+        // 부탁해!
+
+        /*
+            특정 시점에 실행할 javascript 를 어딘가 모아 놓을(준비해 놓을) 필요성이 있다?
+            함수를 만들어서 준비하면 된다.
+            그렇다면
+            어떻게 하면 준비된 javascript 를 실행할수 있을까?
+            javascript 영역에서 함수명() 을 실행하면 된다. 
+        */
+
+        function move(){
+            document.querySelector("#kimImg").style.marginLeft="100px";
+            document.querySelector("#kimImg").style.backgroundColor="yellow";
+            document.querySelector("#kimImg").style.width="200px";
+            document.querySelector("#kimImg").style.height="300px";
+        }
+        /*
+            프로그래밍은 무엇인가?
+
+            특정 시점에 실행할 동작을 미리 준비해 놓고
+            해당 특정 시점에 준비해둔 동작을 일괄 수행하게 하는것
+
+        */
+    </script>
+</body>
+</html>

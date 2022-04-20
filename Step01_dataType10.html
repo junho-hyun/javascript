@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>p1 입니다.</p>
+    <p id="one" class="my-class">p2 입니다.</p>
+    <p class="my-class">p3 입니다.</p>
+    
+    <script>
+        //함수에 전달된 두 수의 합을 콘솔창에 출력하는 함수 
+        let showSum=function(num1, num2){
+            let result=num1+num2;
+            console.log(num1+" 과 "+num2+" 의 합은:"+result);
+        };
+
+        //함수에 전달된 두 수의 합을 리턴해 주는 함수
+        let getSum=function(num1, num2){
+            let result=num1+num2;
+            return result;
+        }; 
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz.html</title>
+</head>
+<body>
+    <button onclick="showCount()">눌러보셈</button>
+    <button onclick="resetCount()">Reset</button>
+    <p id="currentCount">0번</p>
+    <script>
+       
+        let count=0;
+        function showCount(){
+            count = count+1;
+            document.querySelector("#currentCount").innerText=count+"번";
+        }
+        function resetCount(){
+            count=0;
+            document.querySelector("#currentCount").innerText=count+"번";
+        }
+      
+    </script>
+</body>
+</html>

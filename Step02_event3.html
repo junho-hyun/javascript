@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_event3.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+        /* 클래스명이 box 이면서 마우스가 올려져(hover) 있는 요소에 적용할 css */
+        .box:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">div1</div>
+    <div class="box">div2</div>
+    <div class="box">div3</div>
+    <div class="box">div4</div>
+    <div class="box">div5</div>
+    <div class="box">div6</div>
+    <div class="box">div7</div>
+    <div class="box">div8</div>
+    <div class="box">div9</div>
+    <div class="box">div10</div>
+    <script>
+        /*
+            10 개의 div 중에서 클릭한 div 의 innerText 를  "clicked!" 로 변경하는 프로그래밍을 
+            해 보세요
+        */
+        
+        /*
+        //첫번째 방법
+        for(let i=0; i<10; i++){
+            document.querySelectorAll(".box")[i].addEventListener("click", function(){
+                document.querySelectorAll(".box")[i].innerText="clicked!";
+            });
+        }
+        */
+
+        //이벤트를 걸어줄 div 의 참조값을 배열에 담아오기
+        let divs=document.querySelectorAll(".box");
+
+        for(let i=0; i<divs.length; i++){
+            divs[i].addEventListener("click", function(){
+                /*
+                    여기서 this 라는 예약어는 이벤트가 일어난 바로 그 요소의 참조값을 가리킨다.
+                */
+                this.innerText="clicked!";
+            });
+        }
+
+
+    </script>
+</body>
+</html>

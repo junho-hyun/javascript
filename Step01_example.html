@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_example.html</title>
+</head>
+<body>
+    <button onclick="change()">바꾸기</button>
+    <button onclick="change2()">바꾸기2</button>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <p>p6</p>
+    <p>p7</p>
+    <p>p8</p>
+    <p>p9</p>
+    <p>p10</p>
+
+    <script>
+        /*
+            semi colon 에 대하여
+
+            javascript 를 웹브라우저가 해석을 할때 ; 이 있어야 되는 부분에 ; 이
+            없으면 자동으로 넣어서 해석을 한다. 
+
+            그러나 구조가 좀 복잡하면 잘못된 곳에 넣을 가능성도 좀 있고 
+            추후에 배울 java 에서는 반드시 필요한 곳에 ; 이 있어야 에러가 안난다.
+
+            넣어야 할곳에는 넣는 습관을 들이는게 좋다 
+
+            ; 을 안넣어도 되는곳
+            함수의 중괄호 열고 닫고의 끝부분, 
+            for 문의 중괄호 열고 닫고의 끝부분,
+            if, while 문의 중괄호 열고 닫고의 끝부분 ,
+            try~catch 블럭의 끝부분
+            단 object 를 만들때 { } 의 끝부분에는 넣어준다.    
+        */
+
+        
+        //바꾸기 버튼을 눌렀을때 모든 p 요소의 글자색을 red 로 바꿔 보세요.
+        let change=function(){
+            for(let i=0; i<10; i++){
+                document.querySelectorAll("p")[i].style.color="red";
+            }
+        }
+
+        /*
+            때로는 coding 시점에 정확한 반복 횟수를 결정할수 없을때가 있다
+        */
+       
+        let change2=function(){
+            //모든 p요소의 참조값을 담은 배열의 참조값을 ps 라는 이름의 변수에 대입한다. 
+            let ps=document.querySelectorAll("p");
+            //ps 배열의 방의 갯수(size) 만큼 반복문 돌면서 
+            for(let i=0; i<ps.length; i++){
+                // 배열에 저장된 p 요소의 참조값을 하나씩 참조해서 글자 색을 변경한다.
+                ps[i].style.color="red";
+            }
+        }
+
+    </script>
+</body>
+</html>

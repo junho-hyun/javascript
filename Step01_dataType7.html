@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType7.html</title>
+</head>
+<body>
+    <script>
+        
+        //원숭이를 냉장고에 밀어 넣는 함수 
+        let pushMonkey=function(){
+            console.log("냉장고 문을 열어요");
+            console.log("원숭이를 넣어요");
+            console.log("냉장고 문을 닫아요");
+        };
+
+        let getNumber=function(){
+            console.log("getNumber() 호출됨");
+            return 999;
+        };
+        
+        let getGreet=function(){
+            console.log("getGreet() 호출됨");
+            return "hello~";
+        };
+
+        pushMonkey(); //undefined
+        
+        let b=getNumber(); // number type 999
+        
+        let c=getGreet(); // string type "hello~"
+    </script>
+</body>
+</html>
